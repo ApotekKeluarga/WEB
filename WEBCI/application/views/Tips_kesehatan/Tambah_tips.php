@@ -13,26 +13,22 @@
       </ol>
     </div>
 
+    <!-- awal page content -->
     <div class="page-content">
-      
-     
-      <!-- Panel Table Add Row -->
       <div class="panel">
             <div class="panel-heading">
               <h3 class="panel-title">Tambah Tips</h3>
             </div>
-            <div class="panel-body container-fluid">
+            <div class="card-body">
               <form autocomplete="off">
                 <div class="col-md-10 ">
-                  <div class="example-wrap">
                     <h4 class="example-title">Judul</h4>
                     <input type="text" class="form-control" id="inputPlaceholder" placeholder="Masukkan Judul Tips">
-                  </div>
-                <div class="example-wrap">
-                    <h4 class="example-title">Deskripsi</h4>
-                    <textarea class="form-control" id="textareaDefault" rows="3" placeholder="Masukkan Deskripsi"></textarea>
                 </div>
-              </div>
+                <div class="col-md-10 ">
+                    <h4 class="example-title">Deskripsi</h4>
+                    <textarea class="form-control" id="textareaDefault" rows="3" placeholder="Masukkan Tips"></textarea>
+                </div>
               <div class="col-md-6 col-lg-4">
                 <h4 class="example-title">Masukkan Gambar</h4>
                 <div class="example">
@@ -50,9 +46,8 @@
               </form>
             </div>
           </div>
-      <!-- End Panel Table Add Row -->   
-
     </div>
+    <!-- akhir page content -->
   </div>
   <!-- End Page -->
 

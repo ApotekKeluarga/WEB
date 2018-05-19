@@ -13,10 +13,8 @@
       </ol>
     </div>
 
+    <!-- awal page content -->
     <div class="page-content">
-      
-     
-      <!-- Panel Table Add Row -->
       <div class="panel">
             <div class="panel-heading">
               <h3 class="panel-title">Tambah Obat</h3>
@@ -86,9 +84,8 @@
               </form>
             </div>
           </div>
-      <!-- End Panel Table Add Row -->   
-
     </div>
+    <!-- akhir page content -->
   </div>
   <!-- End Page -->
 

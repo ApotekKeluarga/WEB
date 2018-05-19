@@ -32,9 +32,9 @@
           <div class="row">
             <div class="col-md-6">
               <div class="mb-15">
-                <button id="addToTable" class="btn btn-primary" type="button">
+                <a href="<?php echo base_url() ?>index.php/Kategori/tambah_kategori" id="addToTable" class="btn btn-primary" type="button">
                   <i class="icon md-plus" aria-hidden="true"></i> Add row
-                </button>
+                </a>
               </div>
             </div>
           </div>

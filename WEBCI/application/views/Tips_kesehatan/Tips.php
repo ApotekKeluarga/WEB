@@ -14,7 +14,6 @@
     </div>
 
     <?php $this->load->view('Search'); ?>
-      <br>
       <!-- Panel Table Add Row -->
       <div class="panel">
         <header class="panel-heading">

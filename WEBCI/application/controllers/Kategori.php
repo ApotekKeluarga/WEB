@@ -14,4 +14,7 @@ class Kategori extends CI_Controller {
 		);
 		$this->load->view('Datamaster/Kategori', $data);
 	}
+	function tambah_kategori(){
+		$this->load->view('Datamaster/Tambah_kategori');
+	}
 }
