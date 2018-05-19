@@ -13,16 +13,7 @@
       </ol>
     </div>
 
-    <div class="page-content">
-      <!-- Panel Basic -->
-      <div class="col-lg-12">
-        <form class="form-inline" action="" method="post" >
-            <input class="form-control" type="search" placeholder="Search" name="search_obat_admin" aria-label="Search" >
-            <button style="margin-left: 8px" class="btn btn-success my-2 my-sm-0" name="cariobat" type="submit"><i class="nav-link icon md-search" ></i> </button>
-        </form>
-      </div>
-      <br>
-      <br>
+    <?php $this->load->view('Search'); ?>
       <!-- Panel Table Add Row -->
       <div class="panel">
         <header class="panel-heading">
