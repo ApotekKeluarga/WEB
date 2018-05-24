@@ -17,21 +17,22 @@
     <div class="page-content">
       <div class="panel">
             <div class="panel-heading">
-              <h3 class="panel-title">Tambah Tips</h3>
+              <h3 class="panel-title">Edit Tips</h3>
             </div>
             <div class="card-body">
-              <form autocomplete="off" method="post" action="<?php echo base_url(). 'index.php/TipsController/create'; ?>" enctype="multipart/form-data">
+              <form autocomplete="off" method="post" action="<?php echo base_url(). 'index.php/TipsController/editaction'; ?>" enctype="multipart/form-data">
                 <div class="col-md-10 ">
                     <h4 class="example-title">Judul</h4>
-                    <input type="text" class="form-control" name="judul" placeholder="Masukkan Judul Tips">
+                    <input type="text" class="form-control" name="judul" placeholder="Masukkan Judul Tips" value="<?php echo $judul; ?>">
                 </div>
                 <div class="col-md-10 ">
                     <h4 class="example-title">Deskripsi</h4>
-                    <textarea class="form-control" name="isi" rows="3" placeholder="Masukkan Tips"></textarea>
+                    <textarea class="form-control" name="isi" rows="3" placeholder="Masukkan Tips"><?php echo $isi; ?></textarea>
                 </div>
               <div class="col-md-6 col-lg-4">
                 <h4 class="example-title">Masukkan Gambar</h4>
                 <div class="example">
+                  
                   <input type="file" class="dropify-event" name="img" accept="images/*" required>
                 </div>
               

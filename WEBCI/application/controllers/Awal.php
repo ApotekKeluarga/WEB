@@ -21,9 +21,11 @@ class Awal extends CI_Controller {
             'Password' => $password
             );
         $cek = $this->M_user->cek_login("tbl_user_admin",$where)->num_rows();
+        $cek2 = $this->M_user->cek_login("tbl_user_admin",$where)->row();
         if($cek > 0){
  
             $data_session = array(
+                'kd_user_admin'   => $cek2->kd_user_admin,
                 'nama' => $username,
                 'status' => "login"
                 );

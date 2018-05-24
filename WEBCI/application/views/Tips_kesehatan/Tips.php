@@ -23,7 +23,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="mb-15">
-                <a href="<?php echo base_url() ?>index.php/Tips/tambah_tips" id="addToTable" class="btn btn-primary" >
+                <a href="<?php echo base_url() ?>index.php/TipsController/tambah_tips" id="addToTable" class="btn btn-primary" >
                   <i class="icon md-plus" aria-hidden="true"></i> Tambah Tips
                 </a>
               </div>
@@ -42,12 +42,14 @@
 		      </thead>
           <tbody>
             <?php 
+            $no =1;
                 foreach ($data_tips as $value) {?>
                 <tr>
-                  <td><?php echo $value-> kd_tips?></td>
+                  <td><?php echo $no++ ?></td>
                   <td><?php echo $value-> judul?></td>
                   <td><?php echo $value-> isi?></td>
-                  <td><?php echo $value-> img?></td>
+                  <td><img src="<?php echo base_url().$value -> img ?>" width="100" height="100"></td>
+                  <td><a href="<?php echo base_url('index.php/TipsController/edit/'.$value -> kd_tips) ?>" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row waves-effect waves-classic" data-toggle="tooltip" data-original-title="Edit"><i class="icon md-edit" aria-hidden="true"></i></a></td>
                 </tr>
             <?php
                 }
