@@ -24,6 +24,7 @@
                 <div class="col-md-10 ">
                     <h4 class="example-title">Judul</h4>
                     <input type="text" class="form-control" name="judul" placeholder="Masukkan Judul Tips" value="<?php echo $judul; ?>">
+                    <input type="hidden" class="form-control" name="id" placeholder="Masukkan Judul Tips" value="<?php echo $kd_tips; ?>">
                 </div>
                 <div class="col-md-10 ">
                     <h4 class="example-title">Deskripsi</h4>
@@ -33,7 +34,7 @@
                 <h4 class="example-title">Masukkan Gambar</h4>
                 <div class="example">
                   
-                  <input type="file" class="dropify-event" name="img" accept="images/*" required>
+                  <input type="file" class="dropify-event" name="img" accept="images/*">
                 </div>
               
                 <div class="form-group form-material floating" data-plugin="formMaterial">

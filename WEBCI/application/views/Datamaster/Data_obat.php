@@ -63,7 +63,7 @@
                   <td><?php echo $obat-> harga?></td>
                   <td><?php echo $obat-> deskripsi?></td>
                   <td><?php echo $obat-> stok?></td>
-                  <td><?php echo $obat-> img?></td>
+                  <td><img src="<?php echo base_url().$obat -> img ?>" width="100" height="100"></td>
                 </tr>
             <?php
                 }

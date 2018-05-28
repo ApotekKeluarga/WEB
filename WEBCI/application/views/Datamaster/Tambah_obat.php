@@ -20,63 +20,66 @@
               <h3 class="panel-title">Tambah Obat</h3>
             </div>
             <div class="card-body">
-              <form autocomplete="off">
+              <form autocomplete="off" method="post" action="<?php echo base_url(). 'index.php/Data_obat/create'; ?>" enctype="multipart/form-data">
                 <div class="col-md-10 ">
                     <h4 class="example-title">Nama Obat</h4>
-                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="Masukkan Nama Obat">
+                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="Masukkan Nama Obat" name="nm_barang">
                 </div>
                 <div class="col-md-6 ">
                    <h4 class="example-title">Kategori Obat</h4>
-                  <select class="form-control">
+                  <select class="form-control" name="kd_kategori">
                     <option>--- Pilih Kategori ---</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                    <?php
+            foreach ($data_kategori as $value) {
+      ?>
+                    <option value="<?php echo $value->kd_kategori ?>"><?php echo $value->nm_kategori; ?></option>
+                    <?php
+               }
+            ?>
                   </select>
                 </div>
                 <div class="col-md-10 ">
                     <h4 class="example-title">Komposisi</h4>
-                    <textarea class="form-control" id="textareaDefault" rows="3" placeholder="Masukkan Komposisi Obat"></textarea>
+                    <textarea class="form-control" id="textareaDefault" rows="3" placeholder="Masukkan Komposisi Obat" name="komposisi"></textarea>
                 </div>
                 <div class="col-md-10 ">
                     <h4 class="example-title">Indikasi</h4>
-                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="Masukkan Indikasi">
+                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="Masukkan Indikasi" name="indikasi">
                 </div>
                 <div class="col-md-10 ">
                     <h4 class="example-title">Dosis</h4>
-                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="Masukkan Dosis">
+                    <input type="text" class="form-control" name="dosis" id="inputPlaceholder" placeholder="Masukkan Dosis">
                 </div>
                 <div class="col-md-10 ">
                     <h4 class="example-title">Penyajian</h4>
-                    <textarea class="form-control" id="textareaDefault" rows="3" placeholder="Masukkan Penyajian"></textarea>
+                    <textarea class="form-control" id="textareaDefault" rows="3" name="penyajian" placeholder="Masukkan Penyajian"></textarea>
               </div>
                 <div class="col-md-10 ">
                     <h4 class="example-title">Kemasan</h4>
-                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="Masukkan Jenis Kemasan">
+                    <input type="text" class="form-control" name="kemasan" id="inputPlaceholder" placeholder="Masukkan Jenis Kemasan">
                 </div>
                 <div class="col-md-10 ">
                     <h4 class="example-title">Harga</h4>
-                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="Masukkan Harga">
+                    <input type="text" class="form-control" name="harga" id="inputPlaceholder" placeholder="Masukkan Harga">
                 </div>
                 <div class="col-md-10 ">
                     <h4 class="example-title">Deskripsi</h4>
-                    <textarea class="form-control" id="textareaDefault" rows="3" placeholder="Masukkan Deskripsi"></textarea>
+                    <textarea class="form-control" id="textareaDefault" name="deskripsi" rows="3" placeholder="Masukkan Deskripsi"></textarea>
                 </div>
                 <div class="col-md-10 ">
                     <h4 class="example-title">Stok</h4>
-                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="Masukkan Jumlah Stok">
+                    <input type="text" class="form-control" id="inputPlaceholder" name="stok" placeholder="Masukkan Jumlah Stok">
                 </div>
               <div class="col-md-6 col-lg-4">
                 <h4 class="example-title">Masukkan Gambar</h4>
                 <div class="example">
-                  <input type="file" id="input-file-events" class="dropify-event" data-default-file="../../global/photos/view-6-960x640.jpg">
+                  <input type="file" id="input-file-events" class="dropify-event" data-default-file="../../global/photos/view-6-960x640.jpg" name="img" accept="images/*">
                 </div>
               
                 <div class="form-group form-material floating" data-plugin="formMaterial">
                   <div class="input-group">
                     <span class="input-group-btn">
-                      <button class="btn btn-info" type="button">Simpan</button>
+                      <button class="btn btn-info" type="submit" name="btnSubmit">Simpan</button>
                     </span>
                   </div>
                 </div>

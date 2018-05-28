@@ -86,7 +86,7 @@ class TipsController extends CI_Controller {
         		);
         		$res = $this -> Tips_kesehatan -> update ($this -> input -> post('id'),$data);
         		if ($res >= 0) {
-        			header('location:'.base_url().'TipsController');
+        			header('location:'.base_url().'index.php/TipsController');
         		}
         	}
         }else{
@@ -96,8 +96,12 @@ class TipsController extends CI_Controller {
         		);
         		$res = $this -> Tips_kesehatan -> update ($this -> input -> post('id'),$data);
         		if ($res >= 0 ) {
-        			header('location:'.base_url().'TipsController');
+        			header('location:'.base_url('index.php/TipsController'));
         		}
         }
+	}
+	public function hapus($id){
+		$res = $this -> Tips_kesehatan -> delete($id);
+		header('location:'.base_url('index.php/TipsController'));
 	}
 }
