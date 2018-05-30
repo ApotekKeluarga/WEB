@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Pesanan extends CI_Controller {
 function __construct(){
 		parent ::__construct();
@@ -10,5 +9,9 @@ function __construct(){
 	{
 		$data = array('data_pesanan'=> $this -> Pesanan_model -> get_pesan(),);
 		$this->load->view('Pesan/Pesanan',$data);
+	}
+
+	function tambah_pesanan(){
+		$this->load->view('Pesanan/Tambah_pesanan');
 	}
 }
