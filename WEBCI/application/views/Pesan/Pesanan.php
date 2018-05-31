@@ -17,15 +17,14 @@
       <!-- Panel Table Add Row -->
       <div class="panel">
         <header class="panel-heading">
-          <h3 class="panel-title">Add Row</h3>
+          <h3 class="panel-title">Pesan</h3>
         </header>
         <div class="panel-body">
           <div class="row">
             <div class="col-md-6">
               <div class="mb-15">
-                <button id="addToTable" class="btn btn-primary" type="button">
-                  <i class="icon md-plus" aria-hidden="true"></i> Add row
-                </button>
+                <a href="<?php echo base_url() ?>index.php/News/tambah_pesanan" id="addToTable" class="btn btn-primary" type="button">
+                  <i class="icon md-plus" aria-hidden="true"></i> Tambah Pesanan
               </div>
             </div>
           </div>
