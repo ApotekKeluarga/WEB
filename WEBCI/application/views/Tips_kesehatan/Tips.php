@@ -50,7 +50,7 @@
                   <td><?php echo $value-> isi?></td>
                   <td><img src="<?php echo base_url().$value -> img ?>" width="100" height="100"></td>
                   <td><a href="<?php echo base_url('index.php/TipsController/edit/'.$value -> kd_tips) ?>" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row waves-effect waves-classic" data-toggle="tooltip" data-original-title="Edit"><i class="icon md-edit" aria-hidden="true"></i></a>
-                    <a href="<?php echo base_url('index.php/TipsController/hapus/'.$value->kd_tips) ?>" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row waves-effect waves-classic" data-toggle="tooltip" data-original-title="Remove"><i class="icon md-delete" aria-hidden="true"></i></a></td>
+                    <a href="<?php echo base_url('index.php/TipsController/hapus/'.$value->kd_tips) ?>" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row waves-effect waves-classic" data-toggle="tooltip" data-original-title="Remove" onclick="javascript: return confirm('Anda Yakin Akan Menghapus ?')"><i class="icon md-delete" aria-hidden="true"></i></a></td>
                 </tr>
             <?php
                 }

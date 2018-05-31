@@ -70,4 +70,94 @@ class Data_obat extends CI_Controller {
 		}
     }
 	}
+	public function edit($id){
+		$row = $this -> Dataobat_model -> get_by_id($id);
+		$this -> load -> library('encrypt');
+		if($row){
+			$data = array(
+				'kd_barang' => $row -> kd_barang,
+				'nm_barang' => $row -> nm_barang,
+				'kd_kategori' => $row -> kd_kategori,
+				'komposisi' => $row -> komposisi,
+				'indikasi' => $row -> indikasi,
+				'dosis' => $row -> dosis,
+				'penyajian' => $row -> penyajian,
+				'kemasan' => $row -> kemasan,
+				'harga' => $row -> harga,
+				'deskripsi' => $row -> deskripsi,
+				'stok' => $row -> stok,
+				'img' => $row -> img,
+			);
+			$this -> load -> view('Datamaster/Edit_obat',$data);
+		}
+		else{
+			redirect(base_url().'Data_obat');
+		}
+	}
+	public function editaction(){
+		$config = array('upload_path' => './assets/web/base/images/',
+        					'allowed_types' => 'gif|jpg|png'
+        					);
+        $this -> load -> library ('upload',$config);
+        $nm_barang = $this -> input -> post('nm_barang');
+        $kd_kategori = $this -> input -> post('kd_kategori');
+        $komposisi = $this -> input -> post('komposisi');
+        $indikasi = $this -> input -> post('indikasi');
+        $dosis = $this -> input -> post('dosis');
+        $penyajian = $this -> input -> post('penyajian');
+        $kemasan = $this -> input -> post('kemasan');
+        $harga = $this -> input -> post('harga');
+        $deskripsi = $this -> input -> post('deskripsi');
+        $stok = $this -> input -> post('stok');
+        if($_FILES['img']['tmp_name']!=NULL){
+        	if($this -> upload -> do_upload('img')){
+        		$upload_data = $this -> upload -> data();
+        		$row = $this -> Data_obat -> get_by_id($this -> input -> post('id'));
+        		unlink($row -> img);
+        		$data = array(
+        			'nm_barang' => $nm_barang,
+        			'kd_kategori' => $kd_kategori,
+        			'komposisi' => $komposisi,
+        			'indikasi' => $indikasi,
+        			'dosis' => $dosis,
+        			'penyajian' => $penyajian,
+        			'kemasan' => $kemasan,
+        			'harga' => $harga,
+        			'deskripsi' => $deskripsi,
+        			'stok' => $stok,
+        			'img' => "assets/web/base/images/".$upload_data['file_name'],
+        		);
+        		$res = $this -> Dataobat_model -> update ($this -> input -> post('id'),$data);
+        		if ($res >= 0) {
+        			header('location:'.base_url().'index.php/Data_obat');
+        		}
+        	}
+        }else{
+        	$data = array(
+        			'nm_barang' => $nm_barang,
+        			'kd_kategori' => $kd_kategori,
+        			'komposisi' => $komposisi,
+        			'indikasi' => $indikasi,
+        			'dosis' => $dosis,
+        			'penyajian' => $penyajian,
+        			'kemasan' => $kemasan,
+        			'harga' => $harga,
+        			'deskripsi' => $deskripsi,
+        			'stok' => $stok,
+        		);
+        		$res = $this -> Dataobat_model -> update ($this -> input -> post('id'),$data);
+        		if ($res >= 0 ) {
+        			header('location:'.base_url('index.php/Data_obat'));
+        		}
+        }
+	}
+	public function hapus($id){
+		$res = $this -> Dataobat_model -> delete($id);
+		if($res){
+		header('location:'.base_url('index.php/Data_obat'));
+		}
+		else{
+			header('location:'.base_url('index.php/Data_obat'));
+		}
+	}
 }

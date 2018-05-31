@@ -12,7 +12,7 @@
               </a>
             </li>
             <li class="site-menu-item has-sub">
-              <a href="<?php echo base_url() ?>index.php/Tips">
+              <a href="<?php echo base_url() ?>index.php/TipsController">
                                 <i class="site-menu-icon md-library" aria-hidden="true"></i>
                                 <span class="site-menu-title">Tips Kesehatan</span>
                                        
