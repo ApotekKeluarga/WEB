@@ -15,6 +15,22 @@
 
     <?php $this->load->view('Search'); ?>
       <!-- Panel Table Add Row -->
+<<<<<<< HEAD
+=======
+      <div class="panel">
+        <header class="panel-heading">
+          <h3 class="panel-title">Pesan</h3>
+        </header>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-15">
+                <a href="<?php echo base_url() ?>index.php/News/tambah_pesanan" id="addToTable" class="btn btn-primary" type="button">
+                  <i class="icon md-plus" aria-hidden="true"></i> Tambah Pesanan
+              </div>
+            </div>
+          </div>
+>>>>>>> 9c20f8a8f2aac4e15f997cebd642a89312793af4
           <div class="table-responsive"></div>
 		    <table class="table table-bordered" width="100%" cellspacing="0">
 		      <thead class="bg-light">
