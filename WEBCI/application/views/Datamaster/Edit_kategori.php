@@ -17,13 +17,14 @@
     <div class="page-content">
       <div class="panel">
             <div class="panel-heading">
-              <h3 class="panel-title">Tambah Kategori</h3>
+              <h3 class="panel-title">Edit Kategori</h3>
             </div>
             <div class="card-body">
-              <form autocomplete="off" method="post" action="<?php echo base_url(). 'index.php/Kategori/create'; ?>" enctype="multipart/form-data">
+              <form autocomplete="off" method="post" action="<?php echo base_url(). 'index.php/Kategori/editaction'; ?>" enctype="multipart/form-data">
                 <div class="col-md-10 ">
                     <h4 class="example-title">Kategori</h4>
-                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="Masukkan Kategori" name="nm_kategori">
+                    <input type="text" class="form-control" name="nm_kategori" placeholder="Masukkan Kategori" value="<?php echo $nm_kategori; ?>">
+                    <input type="hidden" class="form-control" name="id" placeholder="Masukkan Kategori" value="<?php echo $kd_kategori; ?>">
                 </div>
                 <div class="col-md-6 col-lg-4">
                 <div class="form-group form-material floating" data-plugin="formMaterial">

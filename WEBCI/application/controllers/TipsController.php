@@ -41,6 +41,7 @@ class TipsController extends CI_Controller {
 				'img' => $foto
 				);
 				$insert_data = $this->db->insert('tbl_tips',$data);
+			}
 			if ($insert_data) {
 				redirect(base_url().'index.php/TipsController');
 			 } else{
@@ -50,7 +51,6 @@ class TipsController extends CI_Controller {
 			echo "string1";
 		}
     }
-}
 	public function edit($id){
 		$row = $this -> Tips_kesehatan -> get_by_id($id);
 		$this -> load -> library('encrypt');

@@ -40,10 +40,15 @@
 		    </thead>
             <tbody>
               <?php 
+              $no =1;
                 foreach ($kategori as $kat) {?>
                 <tr>
-                  <td><?php echo $kat-> kd_kategori?></td>
+                  <td><?php echo $no++; ?></td>
                   <td><?php echo $kat-> nm_kategori?></td>
+                  <td>
+                    <a href="<?php echo base_url('index.php/Kategori/edit/'.$kat -> kd_kategori) ?>" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row waves-effect waves-classic" data-toggle="tooltip" data-original-title="Edit"><i class="icon md-edit" aria-hidden="true"></i></a>
+                    <a href="<?php echo base_url('index.php/Kategori/hapus/'.$kat-> kd_kategori) ?>" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row waves-effect waves-classic" data-toggle="tooltip" data-original-title="Remove"><i class="icon md-delete" aria-hidden="true"></i></a></td>
+
                 </tr>
             <?php
                 }
