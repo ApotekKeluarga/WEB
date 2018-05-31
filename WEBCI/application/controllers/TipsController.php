@@ -102,6 +102,11 @@ class TipsController extends CI_Controller {
 	}
 	public function hapus($id){
 		$res = $this -> Tips_kesehatan -> delete($id);
+		if($res){
 		header('location:'.base_url('index.php/TipsController'));
+		}
+		else{
+			header('location:'.base_url('index.php/TipsController'));
+		}
 	}
 }

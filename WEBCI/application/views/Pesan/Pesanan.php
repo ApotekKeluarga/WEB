@@ -15,20 +15,6 @@
 
     <?php $this->load->view('Search'); ?>
       <!-- Panel Table Add Row -->
-      <div class="panel">
-        <header class="panel-heading">
-          <h3 class="panel-title">Add Row</h3>
-        </header>
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="mb-15">
-                <button id="addToTable" class="btn btn-primary" type="button">
-                  <i class="icon md-plus" aria-hidden="true"></i> Add row
-                </button>
-              </div>
-            </div>
-          </div>
           <div class="table-responsive"></div>
 		    <table class="table table-bordered" width="100%" cellspacing="0">
 		      <thead class="bg-light">
